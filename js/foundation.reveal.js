@@ -413,11 +413,9 @@ class Reveal extends Plugin {
       this.$element.hide(this.options.hideDelay);
 
       if (this.options.overlay) {
-        this.$overlay.hide(0, finishUp);
+        this.$overlay.css("display", "none");
       }
-      else {
-        finishUp();
-      }
+      finishUp();
     }
 
     // Conditionals to remove extra event listeners added on open
